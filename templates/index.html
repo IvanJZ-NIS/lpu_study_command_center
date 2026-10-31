@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LPU Cavite Command Center</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar">
+    <div class="brand">
+      <h2>LPU Cavite</h2>
+      <p>Command Center</p>
+    </div>
+    <nav class="nav-menu">
+      <button class="nav-btn active" onclick="switchView('dashboard')">Dashboard</button>
+      <button class="nav-btn" onclick="switchView('grades')">Grade Calculator</button>
+      <button class="nav-btn" onclick="switchView('flashcards')">Quiz & Flashcards</button>
+      <button class="nav-btn" onclick="switchView('notes')">Notes & Materials</button>
+      <button class="nav-btn" onclick="switchView('tasks')">Task Manager</button>
+      <button class="nav-btn" onclick="switchView('calendar')">Calendar Planner</button>
+      <button class="nav-btn" onclick="switchView('modules')">Professor Modules</button>
+      <button class="nav-btn" onclick="switchView('timer')">Study Tracker</button>
+    </nav>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="main-wrapper">
+    <header class="header-banner">
+      <span class="quote">"Learning is not about finishing tasks, but about reflection and discipline."</span>
+      <div class="user-profile"></div>
+    </header>
+
+    <div class="content-container">
+      <!-- 1. Dashboard View -->
+      <section id="view-dashboard" class="view-panel active">
+        <h1>Welcome Back, Lycean</h1>
+        <div class="dashboard-grid">
+          <div class="feature-card"><h3>Academic Standing</h3><p>Current GPA: 1.25</p></div>
+          <div class="feature-card"><h3>Upcoming Deadlines</h3><p>2 Tasks due today</p></div>
+          <div class="feature-card"><h3>Recent Flashcards</h3><p>3 Decks available</p></div>
+        </div>
+      </section>
+
+      <!-- 2. Grade Calculator View -->
+      <section id="view-grades" class="view-panel hidden">
+        <h1>Grade Calculator</h1>
+        <!-- Grade calculator UI component -->
+      </section>
+
+      <!-- 3. Quiz & Flashcards View -->
+      <section id="view-flashcards" class="view-panel hidden">
+        <h1>Quiz & Flashcard Hub</h1>
+        <!-- Flashcard UI component -->
+      </section>
+
+      <!-- Additional views for Notes, Tasks, Calendar, Modules, Study Tracker -->
+    </div>
+  </main>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
