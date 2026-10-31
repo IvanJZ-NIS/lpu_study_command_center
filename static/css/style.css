@@ -1,0 +1,112 @@
+:root {
+  /* Main Backgrounds */
+  --bg-primary: #fbf9f5;         /* Soft warm beige background */
+  --bg-secondary: #f0ece1;       /* Container / card background */
+  --bg-sidebar: #f3efe6;         /* Sidebar background */
+  --bg-input: #ffffff;           /* Form input background */
+
+  /* Text Colors */
+  --text-primary: #1f1e1c;       /* Near black main body text */
+  --text-secondary: #6e6b63;     /* Muted grey/brown for subtext */
+  --text-inverse: #fbf9f5;       /* Text on dark buttons */
+
+  /* Accent Colors (Claude Warm Clay / Terracotta) */
+  --accent-primary: #d97757;     /* Warm terracotta primary button/brand */
+  --accent-hover: #c46242;       /* Hover state for primary buttons */
+  --accent-soft: #f7e8e1;        /* Light terracotta tint for badges/selection */
+  --border-color: #e3dec3;       /* Subtle card/container borders */
+
+  /* Functional Indicators */
+  --success-color: #2e7d32;
+  --warning-color: #ed6c02;
+  --danger-color: #d32f2f;
+
+  /* Card Shadows & Borders */
+  --shadow-sm: 0 1px 3px rgba(31, 30, 28, 0.05);
+  --shadow-md: 0 4px 12px rgba(31, 30, 28, 0.08);
+  --radius-card: 12px;
+  --radius-btn: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar Navigation Dimensions */
+.sidebar {
+  width: 260px;
+  min-width: 260px;
+  height: 100vh;
+  background-color: var(--bg-sidebar);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 16px;
+  box-sizing: border-box;
+}
+
+/* Main Application Container */
+.main-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* Header Banner */
+.header-banner {
+  height: 64px;
+  min-height: 64px;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Feature View Content Container */
+.content-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 32px 24px;
+  box-sizing: border-box;
+}
+
+/* Dashboard Grid Layout (2x4 or 3x3 Card Grid) */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+/* Individual Feature Card Container Dimensions */
+.feature-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-card);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
